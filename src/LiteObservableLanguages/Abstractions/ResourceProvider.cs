@@ -33,8 +33,7 @@ public abstract class ResourceProvider : INotifyPropertyChanged
 #endif
         string? propertyName = null) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName ?? string.Empty));
 
-
-    protected void OnChangeCompleted() => ChangeCompleted?.Invoke(this, null);
+    protected void OnChangeCompleted() => ChangeCompleted?.Invoke(this, null!);
 
     public abstract CultureInfo? Culture { get; set; }
 }
