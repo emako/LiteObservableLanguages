@@ -1,7 +1,4 @@
-﻿using System.Globalization;
-using System.Resources;
-
-namespace LiteObservableLanguages;
+﻿namespace LiteObservableLanguages;
 
 /// <summary>
 /// Provides extension methods for string localization.
