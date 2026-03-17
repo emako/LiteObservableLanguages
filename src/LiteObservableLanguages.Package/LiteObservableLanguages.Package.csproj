@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <FileVersion>1.0.0</FileVersion>
+    <Version>$(VersionPrefix)1.0.0</Version>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <NuspecFile>Package.nuspec</NuspecFile>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <FailBuild>true</FailBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LiteObservableLanguages\LiteObservableLanguages.csproj" ReferenceOutputAssembly="false" PrivateAssets="All"/>
+  </ItemGroup>
+
+  <Target Name="FailBuildIfDebug" BeforeTargets="Build" Condition="'$(FailBuild)' == 'true'">
+    <Error Text="Debug builds are not allowed for this project."/>
+  </Target>
+
+  <Target Name="BuildSourceGeneratorBeforePack" BeforeTargets="GenerateNuspec;Pack">
+    <MSBuild Projects="..\LiteObservableLanguages.SourceGenerator\LiteObservableLanguages.SourceGenerator.csproj" Targets="Build" Properties="Configuration=$(Configuration)" />
+  </Target>
+</Project>

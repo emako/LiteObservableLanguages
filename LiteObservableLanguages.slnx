@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="src/LiteObservableLanguages.Package/LiteObservableLanguages.Package.csproj" />
+  <Project Path="src/LiteObservableLanguages.SourceGenerator/LiteObservableLanguages.SourceGenerator.csproj" />
+  <Project Path="src/LiteObservableLanguages/LiteObservableLanguages.csproj" />
+  <Project Path="src/WpfApp/WpfApp.csproj" />
+</Solution>

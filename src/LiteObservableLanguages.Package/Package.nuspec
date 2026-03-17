@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>LiteObservableLanguages</id>
+    <version>1.0.0</version>
+    <authors>feast107,ema</authors>
+    <owners>ema</owners>
+    <icon>Logo.png</icon>
+    <license type="expression">MIT</license>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/emako/LiteObservableLanguages</projectUrl>
+    <repository type="git" url="https://github.com/emako/LiteObservableLanguages" />
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Lightweight I18N and locale support for WPF: culture-aware markup extensions (I18NExtension, I18NBindingExtension), Locale manager with resource fallback, and source-generated resource keys.</description>
+    <releaseNotes>https://github.com/emako/LiteObservableLanguages/releases</releaseNotes>
+    <copyright>Copyright (c) 2026 LiteObservableLanguages contributors</copyright>
+    <tags>LiteObservableLanguages I18N localization WPF MVVM Locale Culture MarkupExtension ResourceManager</tags>
+    <dependencies>
+      <group targetFramework="net40" />
+      <group targetFramework="net5.0-windows7.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\..\Logo.png" target="" />
+    <file src="..\..\README.md" target="" />
+    <file src="..\LiteObservableLanguages\bin\Release\net40\LiteObservableLanguages.dll" target="lib\net40\LiteObservableLanguages.dll" />
+    <file src="..\LiteObservableLanguages\bin\Release\net40\LiteObservableLanguages.pdb" target="lib\net40\LiteObservableLanguages.pdb" />
+    <file src="..\LiteObservableLanguages\bin\Release\net5.0-windows\LiteObservableLanguages.dll" target="lib\net5.0-windows7.0\LiteObservableLanguages.dll" />
+    <file src="..\LiteObservableLanguages\bin\Release\net5.0-windows\LiteObservableLanguages.pdb" target="lib\net5.0-windows7.0\LiteObservableLanguages.pdb" />
+    <file src="..\LiteObservableLanguages.SourceGenerator\bin\Release\netstandard2.0\LiteObservableLanguages.SourceGenerator.dll" target="analyzers\dotnet\cs\LiteObservableLanguages.SourceGenerator.dll" />
+    <file src="..\LiteObservableLanguages.SourceGenerator\bin\Release\netstandard2.0\LiteObservableLanguages.SourceGenerator.pdb" target="analyzers\dotnet\cs\LiteObservableLanguages.SourceGenerator.pdb" />
+  </files>
+</package>

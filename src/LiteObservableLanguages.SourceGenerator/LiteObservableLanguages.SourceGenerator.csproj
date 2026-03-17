@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>preview</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+    <IsRoslynComponent>true</IsRoslynComponent>
+    <Version>1.0.0</Version>
+    <RootNamespace>LiteObservableLanguages.SourceGenerator</RootNamespace>
+    <PackageId>LiteObservableLanguages.SourceGenerator</PackageId>
+    <Authors>feast107,ema</Authors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/emako/LiteObservableLanguages</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/emako/LiteObservableLanguages</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>LiteObservableLanguages I18N localization WPF MVVM Locale Culture MarkupExtension ResourceManager</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Description>Lightweight I18N and locale support for WPF: culture-aware markup extensions (I18NExtension, I18NBindingExtension), Locale manager with resource fallback, and source-generated resource keys.</Description>
+    <PackageIcon>Logo.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+    <DevelopmentDependency>true</DevelopmentDependency>
+    <NoWarn>$(NoWarn);NU1605;NU5128;RS2008;CS8622</NoWarn>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Feast.CodeAnalysis" Version="0.4.2"/>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.3.1"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\Logo.png" Pack="true" PackagePath="\"/>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false"/>
+  </ItemGroup>
+</Project>
