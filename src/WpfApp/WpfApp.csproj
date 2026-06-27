@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup Condition="'$(MyNuGetFlag)' == 'true'">
-    <PackageReference Include="LiteObservableLanguages" Version="1.0.0"/>
+    <PackageReference Include="LiteObservableLanguages" Version="1.0.1"/>
   </ItemGroup>
 
   <ItemGroup Condition="'$(MyNuGetFlag)' == 'false'">
