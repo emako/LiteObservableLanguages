@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
     <IsRoslynComponent>true</IsRoslynComponent>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <RootNamespace>LiteObservableLanguages.SourceGenerator</RootNamespace>
     <PackageId>LiteObservableLanguages.SourceGenerator</PackageId>
     <Authors>feast107,ema</Authors>

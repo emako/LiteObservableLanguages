@@ -34,6 +34,8 @@ internal class ResourceKeysGenerator : AttributeDetectBaseGenerator
     {
         if (targets.IsDefaultOrEmpty) return;
 
+        // Avoid the need to manually write following.
+        // [assembly: LiteObservableLanguages.Attributes.DisableGenerationFor(typeof(System.Runtime.CompilerServices.ModuleInitializerAttribute))]
         ModuleInitializerPolyfill.EmitIfNeeded(context, targets[0].Item1.SemanticModel.Compilation);
 
         foreach (var (generateCtx, type) in targets)
