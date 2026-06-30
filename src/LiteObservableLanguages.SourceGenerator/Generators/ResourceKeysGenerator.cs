@@ -32,6 +32,10 @@ internal class ResourceKeysGenerator : AttributeDetectBaseGenerator
     protected override void GenerateCode(SourceProductionContext context,
         ImmutableArray<(GeneratorAttributeSyntaxContext, TypeSyntax)> targets)
     {
+        if (targets.IsDefaultOrEmpty) return;
+
+        ModuleInitializerPolyfill.EmitIfNeeded(context, targets[0].Item1.SemanticModel.Compilation);
+
         foreach (var (generateCtx, type) in targets)
         {
             var targetSymbol   = generateCtx.SemanticModel.GetSymbolInfo(type).Symbol as INamedTypeSymbol;
